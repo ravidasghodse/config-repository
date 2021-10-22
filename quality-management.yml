@@ -2,4 +2,7 @@ server:
   port: 8001
 spring:
   config:
-    name: quality-management  profiles:    active:    - dev
+    name: quality-management
+  profiles:
+    active:
+    - dev

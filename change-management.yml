@@ -1,8 +1,10 @@
 server:
   port: 8000
-
 spring:
-  config:
+  application:
     name: change-management
-  profiles:    active:    - dev  messages:    basename: messages  
-    
+  profiles:
+    active:
+    - dev
+  messages:
+    basename: messages

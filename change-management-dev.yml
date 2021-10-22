@@ -1,16 +1,29 @@
-server:  port: 8888
+server:
+  port: 8888
 spring:
   h2:
     console:
       enabled: true
-  datasource:    url: jdbc:h2:mem:testdb
+  datasource:
+    url: jdbc:h2:mem:testdb
     driver-class-name: org.h2.Driver
     username: sa
-    password: 
-  jpa:    database-platform: org.hibernate.dialect.H2Dialect
-    hibernate:      ddl-auto: create-drop
+    password: null
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: create-drop
     show-sql: true
-  messages:    basename: messages
-    encoding: UTF-8  cloud:    config:      uri:      -  http://localhost:8888
-management:  endpoints:    web:      exposure:        include:        - "*"
-        
+  messages:
+    basename: messages
+    encoding: UTF-8
+  cloud:
+    config:
+      uri:
+      - http://localhost:8888
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+        - '*'
